@@ -1,6 +1,8 @@
 # design-production-scripts
 
-Automation scripts for design production workflows.
+Small scripts that take the repetitive work out of design production — renaming exports, setting up documents, formatting pasted content, and other things that shouldn't require manual effort.
+
+Built for InDesign, Illustrator, and macOS.
 
 ## Structure
 
