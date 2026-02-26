@@ -1,3 +1,22 @@
+/**
+ * apply-markdown.jsx
+ *
+ * Converts pasted Markdown text into InDesign paragraph and character styles.
+ * Designed for text copied from LLM output (e.g. SMD files).
+ *
+ * Handles:
+ *   - Headings (H1–H6)
+ *   - Bullet and numbered lists (up to 3 levels)
+ *   - Bold and italic character styles
+ *   - Markdown tables → native InDesign tables
+ *
+ * Requires matching paragraph styles in the document:
+ *   heading-1 through heading-6, bullet-list-level-1 through -3,
+ *   numbered-list-level-1 through -3, table-marker, table-header, table-cell
+ *
+ * Requires matching character styles:
+ *   bold, italic
+ */
 // InDesign Markdown to Styles Script - Updated Order and GREP
 (function () {
   var doc = app.activeDocument;
