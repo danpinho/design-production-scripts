@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(git fetch origin && git branch -r)",
-      "Bash(git add . && git commit -m \"Initial structure: indesign, illustrator, macos folders + README\" && git branch -M main && git push -u origin main)"
-    ]
-  }
-}
