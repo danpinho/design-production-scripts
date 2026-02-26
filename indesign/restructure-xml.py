@@ -25,8 +25,13 @@ story = ET.SubElement(new_root, "Story")
 categories = {}
 
 # Process each row in the original XML
-for row in root.find('.//Story'):
-    category_name = row.find('Kategorie').text
+source_story = root.find('.//Story')
+if source_story is None:
+    raise ValueError("No <Story> element found in input.xml")
+
+for row in source_story:
+    kategorie_el = row.find('Kategorie')
+    category_name = kategorie_el.text if kategorie_el is not None else None
     if category_name not in categories:
         # Create a new category element if it doesn't exist
         category_element = ET.SubElement(story, 'Kategorie')
