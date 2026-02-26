@@ -12,5 +12,9 @@ Automation scripts for design production workflows.
 
 ## Scripts
 
-<!-- Scripts listed here as they are added -->
+### InDesign
+
+| Script | Description |
+|--------|-------------|
+| [`indesign/rename-by-week.py`](indesign/rename-by-week.py) | Renames InDesign exports sequentially by ISO week number for social media scheduling |
 

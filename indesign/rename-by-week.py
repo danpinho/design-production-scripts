@@ -8,7 +8,7 @@ def iso_weeks_in_year(year: int) -> int:
 
 
 def batch_rename_by_week(
-    folder_path, starting_kw, starting_year, files_per_week=1, include_year_in_name=True
+    folder_path, starting_week, starting_year, files_per_week=1, include_year_in_name=True
 ):
     # Get files sorted by modified time (ascending)
     files = sorted(
@@ -27,7 +27,7 @@ def batch_rename_by_week(
         return
 
     file_index = 0
-    current_kw = starting_kw
+    current_week = starting_week
     current_year = starting_year
     weeks_this_year = iso_weeks_in_year(current_year)
 
@@ -36,11 +36,11 @@ def batch_rename_by_week(
 
         # if we're at the first file of a week block, maybe advance the week
         if file_index > 0 and (file_index % files_per_week) == 0:
-            current_kw += 1
+            current_week += 1
 
             # rollover to next ISO year if needed
-            if current_kw > weeks_this_year:
-                current_kw = 1
+            if current_week > weeks_this_year:
+                current_week = 1
                 current_year += 1
                 weeks_this_year = iso_weeks_in_year(current_year)
 
@@ -48,9 +48,9 @@ def batch_rename_by_week(
         ext = os.path.splitext(filename)[1]
 
         if include_year_in_name:
-            new_name = f"{current_year}-KW{current_kw:02d}-{file_number:02d}{ext}"
+            new_name = f"{current_year}-W{current_week:02d}-{file_number:02d}{ext}"
         else:
-            new_name = f"KW{current_kw:02d}-{file_number:02d}{ext}"
+            new_name = f"W{current_week:02d}-{file_number:02d}{ext}"
 
         new_path = os.path.join(folder_path, new_name)
 
@@ -61,9 +61,9 @@ def batch_rename_by_week(
 
 
 # Usage
-folder = "/Users/ax-nb-0220/Desktop/rename"  # Replace with your actual folder path
-starting_kw = 3
+folder = "/path/to/your/folder"  # Replace with your actual folder path
+starting_week = 3
 starting_year = 2026
 files_per_week = 1
 
-batch_rename_by_week(folder, starting_kw, starting_year, files_per_week)
+batch_rename_by_week(folder, starting_week, starting_year, files_per_week)
