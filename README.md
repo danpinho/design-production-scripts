@@ -22,4 +22,14 @@ Built for InDesign, Illustrator, and macOS.
 | [`indesign/apply-markdown.jsx`](indesign/apply-markdown.jsx) | Converts pasted Markdown text (e.g. from LLM output) into InDesign paragraph and character styles, including table conversion |
 | [`indesign/xml-tags-to-styles.jsx`](indesign/xml-tags-to-styles.jsx) | Creates matching paragraph styles from all XML tags in the document — useful for bootstrapping an XML import workflow |
 | [`indesign/setup-layers.jsx`](indesign/setup-layers.jsx) | Sets up a standardized layer structure (Images, Vectors, Text) with assigned colors, renaming default layers if present |
+| [`indesign/export-web-print.jsx`](indesign/export-web-print.jsx) | Exports two PDFs at once — web-optimized for client delivery and high-res for print and mockup placements |
+
+### Illustrator
+
+| Script | Description |
+|--------|-------------|
+| [`illustrator/setup-layers.jsx`](illustrator/setup-layers.jsx) | Sets up Black and White layers for brand/logo documents, removes the default layer, and sets Black as active |
+| [`illustrator/export-layers.jsx`](illustrator/export-layers.jsx) | Saves each layer as a separate .ai file named after the document and layer |
+| [`illustrator/export-print.jsx`](illustrator/export-print.jsx) | Exports EPS, SVG, and PDF into separate subfolders next to the source file |
+| [`illustrator/export-web.jsx`](illustrator/export-web.jsx) | Exports SVG and high-res PNG (300 DPI, transparent) into separate subfolders next to the source file |
 
