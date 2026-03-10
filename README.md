@@ -29,7 +29,7 @@ Built for InDesign, Illustrator, and macOS.
 
 | Script | Description |
 |--------|-------------|
-| [`illustrator/setup-layers.jsx`](illustrator/setup-layers.jsx) | Sets up Black and White layers for brand/logo documents, removes the default layer, and sets Black as active |
+| [`illustrator/setup-layers.jsx`](illustrator/setup-layers.jsx) | Sets up Primary, Black, and White layers for brand/logo documents, removes the default layer, and sets Primary as active |
 | [`illustrator/export-layers.jsx`](illustrator/export-layers.jsx) | Saves each layer as a separate .ai file named after the document and layer |
 | [`illustrator/export-print.jsx`](illustrator/export-print.jsx) | Exports EPS, SVG, and PDF into separate subfolders next to the source file |
 | [`illustrator/export-web.jsx`](illustrator/export-web.jsx) | Exports SVG and high-res PNG (300 DPI, transparent) into separate subfolders next to the source file |

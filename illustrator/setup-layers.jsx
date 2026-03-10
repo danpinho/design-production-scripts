@@ -1,9 +1,9 @@
 /**
  * setup-layers.jsx
  *
- * Sets up a two-layer structure for brand/logo documents in Illustrator.
- * Creates Black and White layers, removes the default "Layer 1",
- * and sets Black as the active visible layer to start working.
+ * Sets up a three-layer structure for brand/logo documents in Illustrator.
+ * Creates White, Black, and Primary layers (top to bottom), removes the
+ * default "Layer 1", and sets Primary as the active visible layer.
  *
  * Creates a new document if none is open.
  */
@@ -16,10 +16,10 @@ if (app.documents.length == 0) {
 // Get the active document
 var doc = app.activeDocument;
 
-// Array of layer names you want to create
-var layerNames = ["Black", "White"];
+// Layer names: add in reverse panel order (layers.add() always inserts at top)
+// Desired panel order: White (top), Black, Primary (bottom)
+var layerNames = ["Primary", "Black", "White"];
 
-// Loop through the array and create layers with the given names
 for (var i = 0; i < layerNames.length; i++) {
     var newLayer = doc.layers.add();
     newLayer.name = layerNames[i];
@@ -33,10 +33,10 @@ try {
     // "Layer 1" doesn't exist, so we do nothing
 }
 
-// Make "Black" the active layer and set all others to invisible
+// Make "Primary" the active layer and set all others to invisible
 for (var j = 0; j < doc.layers.length; j++) {
     var currentLayer = doc.layers[j];
-    if (currentLayer.name === "Black") {
+    if (currentLayer.name === "Primary") {
         doc.activeLayer = currentLayer;
         currentLayer.visible = true;
     } else {
