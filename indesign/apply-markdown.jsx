@@ -16,6 +16,9 @@
  *
  * Requires matching character styles:
  *   bold, italic
+ *
+ * Requires matching table styles:
+ *   tables
  */
 // InDesign Markdown to Styles Script - Updated Order and GREP
 (function () {
@@ -259,7 +262,11 @@
         }
       }
     }
-
+    // Apply table style
+    var tStyle = doc.tableStyles.itemByName("tables");
+    if (tStyle.isValid) {
+      table.appliedTableStyle = tStyle;
+    }
     // Delete original paragraphs
     for (var d = paragraphs.length - 1; d >= 0; d--) {
       paragraphs[d].remove();
