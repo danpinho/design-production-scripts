@@ -30,13 +30,13 @@
 
   // --- CONFIGURATION ---
   var grepChanges = [
-    // 1. Headings (Stripping markers first)
-    { find: "^#{6}\\s+(.+)$", replace: "$1", style: "heading-6", type: "para" },
-    { find: "^#{5}\\s+(.+)$", replace: "$1", style: "heading-5", type: "para" },
-    { find: "^#{4}\\s+(.+)$", replace: "$1", style: "heading-4", type: "para" },
-    { find: "^#{3}\\s+(.+)$", replace: "$1", style: "heading-3", type: "para" },
-    { find: "^#{2}\\s+(.+)$", replace: "$1", style: "heading-2", type: "para" },
-    { find: "^#{1}\\s+(.+)$", replace: "$1", style: "heading-1", type: "para" },
+// 1. Headings (Stripping markers AND optional leading number)
+    { find: "^#{6}\\s+(\\d+\\.\\s+)?(.+)$", replace: "$2", style: "heading-6", type: "para" },
+    { find: "^#{5}\\s+(\\d+\\.\\s+)?(.+)$", replace: "$2", style: "heading-5", type: "para" },
+    { find: "^#{4}\\s+(\\d+\\.\\s+)?(.+)$", replace: "$2", style: "heading-4", type: "para" },
+    { find: "^#{3}\\s+(\\d+\\.\\s+)?(.+)$", replace: "$2", style: "heading-3", type: "para" },
+    { find: "^#{2}\\s+(\\d+\\.\\s+)?(.+)$", replace: "$2", style: "heading-2", type: "para" },
+    { find: "^#{1}\\s+(\\d+\\.\\s+)?(.+)$", replace: "$2", style: "heading-1", type: "para" },
 
     // 2. Lists
     {
