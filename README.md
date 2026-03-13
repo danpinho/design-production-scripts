@@ -48,18 +48,18 @@ Built for InDesign, Illustrator, and macOS.
 
 | Script | Description |
 |--------|-------------|
-| [`general/rename/rename using csv.py`](general/rename/rename%20using%20csv.py) | Renames files in a folder based on a CSV mapping with `original_file` and `filename` columns — skips missing files and name conflicts |
+| [`general/rename/rename-by-csv.py`](general/rename/rename-by-csv.py) | Renames files in a folder based on a CSV mapping with `original_file` and `filename` columns — skips missing files and name conflicts |
 
 ### General — Data
 
 | Script | Description |
 |--------|-------------|
-| [`general/data/csv_to_xml.py`](general/data/csv_to_xml.py) | Converts a CSV file to XML — each row becomes a `<Row>` element with child elements per column, UTF-8 encoded |
-| [`general/data/transform_xml.py`](general/data/transform_xml.py) | Restructures XML by extracting `Kategorie` values to standalone elements while flattening rows into the parent `<Story>` |
-| [`general/data/excel_capsfix.py`](general/data/excel_capsfix.py) | Converts a specified column in an Excel file to title case and saves the result as a new file |
+| [`general/data/csv-to-xml.py`](general/data/csv-to-xml.py) | Converts a CSV file to XML — each row becomes a `<Row>` element with child elements per column, UTF-8 encoded |
+| [`general/data/restructure-xml.py`](general/data/restructure-xml.py) | Restructures XML by extracting `Kategorie` values to standalone elements while flattening rows into the parent `<Story>` |
+| [`general/data/excel-titlecase.py`](general/data/excel-titlecase.py) | Converts a specified column in an Excel file to title case and saves the result as a new file |
 
 ### General — Media
 
 | Script | Description |
 |--------|-------------|
-| [`general/media/add_description.py`](general/media/add_description.py) | Reads a CSV with `filename` and `description` columns and writes the description into the EXIF metadata of each image |
+| [`general/media/image-exif-description.py`](general/media/image-exif-description.py) | Reads a CSV with `filename` and `description` columns and writes the description into the EXIF metadata of each image |
