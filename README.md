@@ -10,7 +10,10 @@ Built for InDesign, Illustrator, and macOS.
 |--------|-------------|
 | `indesign/` | Adobe InDesign scripts (ExtendScript/JSX) |
 | `illustrator/` | Adobe Illustrator scripts (ExtendScript/JSX) |
-| `macos/` | macOS automation scripts (Python, shell) |
+| `macos/` | macOS automation scripts (Python, AppleScript) |
+| `general/rename/` | File renaming utilities |
+| `general/data/` | Data format conversion and cleanup |
+| `general/media/` | Image metadata tools |
 
 ## Scripts
 
@@ -40,3 +43,23 @@ Built for InDesign, Illustrator, and macOS.
 | Script | Description |
 |--------|-------------|
 | [`macos/create_folders.py`](macos/create_folders.py) | Creates a folder hierarchy from a Markdown list — each `- item` becomes a folder, indentation (2 spaces) defines nesting |
+
+### General — Rename
+
+| Script | Description |
+|--------|-------------|
+| [`general/rename/rename using csv.py`](general/rename/rename%20using%20csv.py) | Renames files in a folder based on a CSV mapping with `original_file` and `filename` columns — skips missing files and name conflicts |
+
+### General — Data
+
+| Script | Description |
+|--------|-------------|
+| [`general/data/csv_to_xml.py`](general/data/csv_to_xml.py) | Converts a CSV file to XML — each row becomes a `<Row>` element with child elements per column, UTF-8 encoded |
+| [`general/data/transform_xml.py`](general/data/transform_xml.py) | Restructures XML by extracting `Kategorie` values to standalone elements while flattening rows into the parent `<Story>` |
+| [`general/data/excel_capsfix.py`](general/data/excel_capsfix.py) | Converts a specified column in an Excel file to title case and saves the result as a new file |
+
+### General — Media
+
+| Script | Description |
+|--------|-------------|
+| [`general/media/add_description.py`](general/media/add_description.py) | Reads a CSV with `filename` and `description` columns and writes the description into the EXIF metadata of each image |
