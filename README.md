@@ -39,5 +39,4 @@ Built for InDesign, Illustrator, and macOS.
 
 | Script | Description |
 |--------|-------------|
-| [`macos/rename-images.applescript`](macos/rename-images.applescript) | Batch-renames image files in a selected folder to a structured `{project}_{location}_{sequence}` convention, sorted by modification date |
 | [`macos/create_folders.py`](macos/create_folders.py) | Creates a folder hierarchy from a Markdown list — each `- item` becomes a folder, indentation (2 spaces) defines nesting |
