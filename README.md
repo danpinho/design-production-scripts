@@ -43,6 +43,7 @@ Built for InDesign, Illustrator, and macOS.
 | Script | Description |
 |--------|-------------|
 | [`macos/create_folders.py`](macos/create_folders.py) | Creates a folder hierarchy from a Markdown list — each `- item` becomes a folder, indentation (2 spaces) defines nesting |
+| [`macos/rename-images.scpt`](macos/rename-images.scpt) | Batch-renames image files in a folder using a `{project-id}_{location}_{sequence}.ext` convention — prompts for project ID, location, and start number, then sorts by modification date (oldest first) |
 
 ### General — Rename
 
