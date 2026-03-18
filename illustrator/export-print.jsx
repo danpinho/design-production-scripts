@@ -1,6 +1,9 @@
 /**
  * export-print.jsx
  *
+ * Use case: A client or partner asks "can you send us your logo?" —
+ * run this script to instantly export all print-ready formats in one go.
+ *
  * Exports the active Illustrator document in three print-ready formats at once:
  *   - EPS → /EPS folder
  *   - SVG → /SVG folder
