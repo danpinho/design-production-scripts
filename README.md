@@ -10,10 +10,8 @@ Built for InDesign, Illustrator, and macOS.
 |--------|-------------|
 | `indesign/` | Adobe InDesign scripts (ExtendScript/JSX) |
 | `illustrator/` | Adobe Illustrator scripts (ExtendScript/JSX) |
-| `macos/` | macOS automation scripts (Python, AppleScript) |
-| `general/rename/` | File renaming utilities |
-| `general/data/` | Data format conversion and cleanup |
-| `general/media/` | Image metadata tools |
+| `macos/` | macOS automation scripts (AppleScript) |
+| `general/` | Cross-platform utilities — renaming, data conversion, image metadata |
 
 ## Scripts
 
@@ -43,25 +41,14 @@ Built for InDesign, Illustrator, and macOS.
 
 | Script | Description |
 |--------|-------------|
-| [`macos/create-folders.py`](macos/create-folders.py) | Creates a folder hierarchy from a Markdown list — each `- item` becomes a folder, indentation (2 spaces) defines nesting |
 | [`macos/rename-images.scpt`](macos/rename-images.scpt) | Batch-renames image files in a folder using a `{project-id}_{location}_{sequence}.ext` convention — prompts for project ID, location, and start number, then sorts by modification date (oldest first) |
 
-### General — Rename
+### General
 
 | Script | Description |
 |--------|-------------|
-| [`general/rename/rename-by-csv.py`](general/rename/rename-by-csv.py) | Renames files in a folder based on a CSV mapping with `original_file` and `filename` columns — skips missing files and name conflicts |
-
-### General — Data
-
-| Script | Description |
-|--------|-------------|
-| [`general/data/csv-to-xml.py`](general/data/csv-to-xml.py) | Converts a CSV file to XML — each row becomes a `<Row>` element with child elements per column, UTF-8 encoded |
-| [`general/data/restructure-xml.py`](general/data/restructure-xml.py) | Restructures XML by extracting `Kategorie` values to standalone elements while flattening rows into the parent `<Story>` |
-| [`general/data/excel-titlecase.py`](general/data/excel-titlecase.py) | Converts a specified column in an Excel file to title case and saves the result as a new file |
-
-### General — Media
-
-| Script | Description |
-|--------|-------------|
-| [`general/media/image-exif-description.py`](general/media/image-exif-description.py) | Reads a CSV with `filename` and `description` columns and writes the description into the EXIF metadata of each image |
+| [`general/create-folders.py`](general/create-folders.py) | Creates a folder hierarchy from a Markdown list — each `- item` becomes a folder, indentation (2 spaces) defines nesting |
+| [`general/rename-by-csv.py`](general/rename-by-csv.py) | Renames files in a folder based on a CSV mapping with `original_file` and `filename` columns — skips missing files and name conflicts |
+| [`general/csv-to-xml.py`](general/csv-to-xml.py) | Converts a CSV file to XML — each row becomes a `<Row>` element with child elements per column, UTF-8 encoded |
+| [`general/excel-titlecase.py`](general/excel-titlecase.py) | Converts a specified column in an Excel file to title case and saves the result as a new file |
+| [`general/image-exif-description.py`](general/image-exif-description.py) | Reads a CSV with `filename` and `description` columns and writes the description into the EXIF metadata of each image |

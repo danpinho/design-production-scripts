@@ -1,8 +1,8 @@
 import os
 
 # Define the input Markdown file and the base output directory
-input_file = "folders.md"  # Change this to your actual filename
-base_path = "./output"  # Change this if you want a different output location
+input_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "folders.md")
+base_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "output")
 
 os.makedirs(base_path, exist_ok=True)
 
