@@ -32,7 +32,7 @@ def create_folders_from_md(file_path, base_dir):
 
             # Extract folder name after "-"
             if line.lstrip().startswith("- "):
-                folder_name = line.lstrip("- ").strip()
+                folder_name = line.lstrip()[2:].strip()
 
                 # Adjust stack depth based on indentation
                 while len(folder_stack) > indent_level + 1:
