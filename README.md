@@ -23,7 +23,7 @@ Built for InDesign, Illustrator, and macOS.
 | [`indesign/apply-markdown.jsx`](indesign/apply-markdown.jsx) | Converts pasted Markdown text (e.g. from LLM output) into InDesign paragraph and character styles, including native table conversion with applied paragraph and table styles |
 | [`indesign/xml-tags-to-styles.jsx`](indesign/xml-tags-to-styles.jsx) | Creates matching paragraph styles from all XML tags in the document — useful for bootstrapping an XML import workflow |
 | [`indesign/setup-layers.jsx`](indesign/setup-layers.jsx) | Sets up a standardized layer structure (Images, Vectors, Text) with assigned colors, renaming default layers if present |
-| [`indesign/export-web-print.jsx`](indesign/export-web-print.jsx) | Exports two PDFs at once — web-optimized (`-web.pdf`) for client delivery and high-res (`-print.pdf`) for print and mockups — saves to `30 Export/` (JD Template D) |
+| [`indesign/export-web-print.jsx`](indesign/export-web-print.jsx) | Exports two PDFs at once — web-optimized (`-web.pdf`) for client delivery and high-res (`-print.pdf`) for print and mockups — saves to a `30 Export/` subfolder |
 | [`indesign/restructure-xml.py`](indesign/restructure-xml.py) | Restructures an XML file for InDesign import by extracting category values from rows into standalone elements |
 
 ### Illustrator
@@ -41,7 +41,7 @@ Built for InDesign, Illustrator, and macOS.
 
 | Script | Description |
 |--------|-------------|
-| [`macos/create-project-folder.applescript`](macos/create-project-folder.applescript) | Creates an Adobe production project folder (Template D) with `10 Assets/`, `20 Entwurf/`, `30 Export/` subfolders — prompts for target location and project name, applies Title-Case and umlaut transliteration |
+| [`macos/create-project-folder.applescript`](macos/create-project-folder.applescript) | Creates an Adobe production project folder with `10 Assets/`, `20 Entwurf/`, `30 Export/` subfolders — prompts for ID number and project name, applies Title-Case and umlaut transliteration |
 | [`macos/rename-images.scpt`](macos/rename-images.scpt) | Batch-renames image files in a folder using a `{project-id}_{location}_{sequence}.ext` convention — prompts for project ID, location, and start number, then sorts by modification date (oldest first) |
 
 ### General
