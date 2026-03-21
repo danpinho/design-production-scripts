@@ -2,52 +2,40 @@
  * export-web-print.jsx
  *
  * Exports two PDF versions of the active document in one go:
- *   - Web  (_w.pdf) — optimized for screen and client delivery
- *   - Print (_m.pdf) — high-res, suitable for print and mockup placements
+ *   - Web  (-web.pdf) — optimized for screen and client delivery
+ *   - Print (-print.pdf) — high-res, suitable for print and mockup placements
  *
- * Both files are saved into a "PDFs" subfolder next to the source document,
- * named after the original file (e.g. "brochure_w.pdf", "brochure_m.pdf").
+ * Both files are saved into a "30 Export" subfolder next to the source document
+ * (JD Template D layout structure), created automatically if it doesn't exist.
  *
- * Requires two PDF export presets defined in InDesign named "w" and "m".
+ * Requires two PDF export presets defined in InDesign named "web" and "print".
  */
-// Define export presets
-var presetName1 = "w";
-var presetName2 = "m";
+var presetWeb = "web";
+var presetPrint = "print";
 
-// Function to handle individual PDF exports
 function exportWithPreset(presetName, preset) {
     if (preset.isValid) {
-        // Get the InDesign document's original name
         var originalFilename = app.activeDocument.name.replace(/\.[^.]+$/, '');
-
-        // Get the path of the original InDesign file
         var originalFilePath = app.activeDocument.filePath;
 
-        // Create the "PDFs" subfolder if it doesn't exist
-        var pdfFolder = new Folder(originalFilePath + "/PDFs");
-        if (!pdfFolder.exists) {
-            pdfFolder.create();
+        var exportFolder = new Folder(originalFilePath + "/30 Export");
+        if (!exportFolder.exists) {
+            exportFolder.create();
         }
 
-        // Construct the export filename
-        var exportFilename = originalFilename + "_" + presetName + ".pdf";
+        var exportFilename = originalFilename + "-" + presetName + ".pdf";
+        var exportPath = new File(exportFolder + "/" + exportFilename);
 
-        // Construct the full export path inside the "PDFs" folder
-        var exportPath = new File(pdfFolder + "/" + exportFilename);
-
-        // Export the document
         app.activeDocument.exportFile(ExportFormat.PDF_TYPE, exportPath, false, preset);
 
-        alert("PDF exported successfully: " + exportFilename);
+        alert("PDF exported: " + exportFilename);
     } else {
         alert("PDF export preset '" + presetName + "' not found.");
     }
 }
 
-// Get PDF export presets
-var preset1 = app.pdfExportPresets.itemByName(presetName1);
-var preset2 = app.pdfExportPresets.itemByName(presetName2);
+var preset1 = app.pdfExportPresets.itemByName(presetWeb);
+var preset2 = app.pdfExportPresets.itemByName(presetPrint);
 
-// Export using the defined presets
-exportWithPreset(presetName1, preset1);
-exportWithPreset(presetName2, preset2);
+exportWithPreset(presetWeb, preset1);
+exportWithPreset(presetPrint, preset2);
