@@ -42,7 +42,7 @@ Built for InDesign, Illustrator, and macOS.
 
 | Script | Description |
 |--------|-------------|
-| [`macos/create-project-folder.applescript`](macos/create-project-folder.applescript) | Creates an Adobe production project folder with `10 Assets/`, `20 Entwurf/`, `30 Export/` subfolders — prompts for ID number and project name, applies Title-Case and umlaut transliteration |
+| [`macos/create-project-folder.applescript`](macos/create-project-folder.applescript) | Creates an Adobe production project folder with `Assets/`, `Links/`, `PDFs/`, `Versionen/` subfolders — prompts for JD ID and project name, applies Title-Case and umlaut transliteration |
 | [`macos/rename-images.scpt`](macos/rename-images.scpt) | Batch-renames image files in a folder using a `{project-id}_{location}_{sequence}.ext` convention — prompts for project ID, location, and start number, then sorts by modification date (oldest first) |
 
 ### General
