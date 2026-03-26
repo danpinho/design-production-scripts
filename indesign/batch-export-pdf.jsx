@@ -1,10 +1,9 @@
 // Batch export all .indd files in a chosen folder to PDF
 // Run from InDesign: Window > Utilities > Scripts, double-click this file
 
-var scriptFile = File($.fileName);
-var defaultFolder = scriptFile.parent;
+var defaultFolder = Folder.desktop;
 
-// Ask user to select a folder, defaulting to the script's own folder
+// Ask user to select a folder, defaulting to the Desktop
 var sourceFolder = Folder.selectDialog(
   "Select folder containing .indd files",
   defaultFolder,
