@@ -22,6 +22,7 @@ Built for InDesign, Illustrator, and macOS.
 | [`indesign/apply-markdown.jsx`](indesign/apply-markdown.jsx) | Converts pasted Markdown text (e.g. from LLM output) into InDesign paragraph and character styles, including native table conversion with applied paragraph and table styles |
 | [`indesign/batch-export-pdf.jsx`](indesign/batch-export-pdf.jsx) | Batch-exports all `.indd` files in a selected folder to PDF using the High Quality Print preset — saves into a `PDF/` subfolder |
 | [`indesign/export-web-print.jsx`](indesign/export-web-print.jsx) | Exports two PDFs at once — web-optimized (`-web.pdf`) for client delivery and high-res (`-print.pdf`) for print and mockups — saves to a `30 Export/` subfolder |
+| [`indesign/md-to-text-frame.jsx`](indesign/md-to-text-frame.jsx) | Places the contents of a Markdown file into the selected text frame — opens a file picker and inserts the raw text |
 | [`indesign/rename-by-week.py`](indesign/rename-by-week.py) | Renames InDesign exports sequentially by ISO week number for social media scheduling |
 | [`indesign/restructure-xml.py`](indesign/restructure-xml.py) | Restructures an XML file for InDesign import by extracting category values from rows into standalone elements |
 | [`indesign/setup-layers.jsx`](indesign/setup-layers.jsx) | Sets up a standardized layer structure (Images, Vectors, Text) with assigned colors, renaming default layers if present |
