@@ -3,8 +3,12 @@ import { JSDOM } from "jsdom";
 import { csvParse } from "d3-dsv";
 import { readFileSync, writeFileSync } from "fs";
 
+// Accept optional arguments: node chart.js [input.csv] [output.svg]
+const inputFile = process.argv[2] ?? "data.csv";
+const outputFile = process.argv[3] ?? "chart.svg";
+
 // Load data
-const data = csvParse(readFileSync("data.csv", "utf8"), d => ({
+const data = csvParse(readFileSync(inputFile, "utf8"), d => ({
   category: d.category,
   value: +d.value
 }));
@@ -16,11 +20,12 @@ const chart = Plot.plot({
   document,
   width: 800,
   style: { fontFamily: "Helvetica, Arial, sans-serif" },
+  y: { label: "Value" },
   marks: [
     Plot.barY(data, { x: "category", y: "value", fill: "#2563eb" })
   ]
 });
 
 // Save SVG
-writeFileSync("chart.svg", chart.outerHTML);
-console.log("chart.svg written");
+writeFileSync(outputFile, chart.outerHTML);
+console.log(`${outputFile} written`);

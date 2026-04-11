@@ -56,4 +56,4 @@ Built for InDesign, Illustrator, and macOS.
 | [`general/csv-to-xml.py`](general/csv-to-xml.py) | Converts a CSV file to XML — each row becomes a `<Row>` element with child elements per column, UTF-8 encoded |
 | [`general/excel-titlecase.py`](general/excel-titlecase.py) | Converts a specified column in an Excel file to title case and saves the result as a new file |
 | [`general/image-exif-description.py`](general/image-exif-description.py) | Reads a CSV with `filename` and `description` columns and writes the description into the EXIF metadata of each image |
-| [`general/csv-to-chart/chart.js`](general/csv-to-chart/chart.js) | Reads a CSV file with `category` and `value` columns and renders a bar chart as an SVG using Observable Plot |
+| [`general/csv-to-chart/`](general/csv-to-chart/) | Renders CSV data (`category`, `value` columns) as SVG bar charts using Observable Plot — single file (`chart.js`) or batch mode for all CSVs in a folder (`batch.js`) |
