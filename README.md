@@ -22,6 +22,7 @@ Built for InDesign, Illustrator, and macOS.
 | [`indesign/apply-markdown.jsx`](indesign/apply-markdown.jsx) | Converts pasted Markdown text (e.g. from LLM output) into InDesign paragraph and character styles, including native table conversion with applied paragraph and table styles |
 | [`indesign/batch-export-pdf.jsx`](indesign/batch-export-pdf.jsx) | Batch-exports all `.indd` files in a selected folder to PDF using the High Quality Print preset — saves into a `PDF/` subfolder |
 | [`indesign/batch-export-interactive.jsx`](indesign/batch-export-interactive.jsx) | Batch-exports all `.indd` files in a selected folder to Interactive PDF — saves into a `PDF_Interactive/` subfolder |
+| [`indesign/batch-export-jpeg.jsx`](indesign/batch-export-jpeg.jsx) | Batch-exports all `.indd` files in a selected folder to JPEG (one file per page, high quality) — saves into a `JPEG/` subfolder |
 | [`indesign/clean-up-layers.jsx`](indesign/clean-up-layers.jsx) | Sorts all page items into three layers (Text, Images, Vectors) based on content type — useful for organizing old, unstructured documents |
 | [`indesign/export-web-print.jsx`](indesign/export-web-print.jsx) | Exports two PDFs at once — web-optimized (`-web.pdf`) for client delivery and high-res (`-print.pdf`) for print and mockups — saves to a `30 Export/` subfolder |
 | [`indesign/md-to-text-frame.jsx`](indesign/md-to-text-frame.jsx) | Places the contents of a Markdown file into the selected text frame — opens a file picker and inserts the raw text |
