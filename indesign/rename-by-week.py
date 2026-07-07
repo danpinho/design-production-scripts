@@ -47,10 +47,14 @@ def batch_rename_by_week(
         file_number = (file_index % files_per_week) + 1
         ext = os.path.splitext(filename)[1]
 
+        # Only add a sequence suffix when there is more than one file per week —
+        # with a single file per week the "-01" is just noise.
+        suffix = f"-{file_number:02d}" if files_per_week > 1 else ""
+
         if include_year_in_name:
-            new_name = f"{current_year}-W{current_week:02d}-{file_number:02d}{ext}"
+            new_name = f"{current_year}-KW{current_week:02d}{suffix}{ext}"
         else:
-            new_name = f"W{current_week:02d}-{file_number:02d}{ext}"
+            new_name = f"KW{current_week:02d}{suffix}{ext}"
 
         new_path = os.path.join(folder_path, new_name)
 
