@@ -5,8 +5,9 @@
  *   - Web  (-web.pdf) — optimized for screen and client delivery
  *   - Print (-print.pdf) — high-res, suitable for print and mockup placements
  *
- * Both files are saved into a "30 Export" subfolder next to the source document
- * (JD Template D layout structure), created automatically if it doesn't exist.
+ * Both files are saved into the "PDFs" subfolder next to the source document
+ * (standard project structure — see SOP "Projektordner anlegen"), created
+ * automatically if it doesn't exist.
  *
  * Requires two PDF export presets defined in InDesign named "web" and "print".
  */
@@ -18,7 +19,7 @@ function exportWithPreset(presetName, preset) {
         var originalFilename = app.activeDocument.name.replace(/\.[^.]+$/, '');
         var originalFilePath = app.activeDocument.filePath;
 
-        var exportFolder = new Folder(originalFilePath + "/30 Export");
+        var exportFolder = new Folder(originalFilePath + "/PDFs");
         if (!exportFolder.exists) {
             exportFolder.create();
         }

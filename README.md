@@ -24,7 +24,7 @@ Built for InDesign, Illustrator, and macOS.
 | [`indesign/batch-export-interactive.jsx`](indesign/batch-export-interactive.jsx) | Batch-exports all `.indd` files in a selected folder to Interactive PDF — saves into a `PDF_Interactive/` subfolder |
 | [`indesign/batch-export-jpeg.jsx`](indesign/batch-export-jpeg.jsx) | Batch-exports all `.indd` files in a selected folder to JPEG (one file per page, high quality) — saves into a `JPEG/` subfolder |
 | [`indesign/clean-up-layers.jsx`](indesign/clean-up-layers.jsx) | Sorts all page items into three layers (Text, Images, Vectors) based on content type — useful for organizing old, unstructured documents |
-| [`indesign/export-web-print.jsx`](indesign/export-web-print.jsx) | Exports two PDFs at once — web-optimized (`-web.pdf`) for client delivery and high-res (`-print.pdf`) for print and mockups — saves to a `30 Export/` subfolder |
+| [`indesign/export-web-print.jsx`](indesign/export-web-print.jsx) | Exports two PDFs at once — web-optimized (`-web.pdf`) for client delivery and high-res (`-print.pdf`) for print and mockups — saves to the project's `PDFs/` subfolder |
 | [`indesign/md-to-text-frame.jsx`](indesign/md-to-text-frame.jsx) | Places the contents of a Markdown file into the selected text frame — opens a file picker and inserts the raw text |
 | [`indesign/rename-by-week.py`](indesign/rename-by-week.py) | Renames InDesign exports by ISO calendar week (German `KW` format, e.g. `2026-KW03`), sorted by modified date — adds a sequence suffix only when multiple files share a week |
 | [`indesign/restructure-xml.py`](indesign/restructure-xml.py) | Restructures an XML file for InDesign import by extracting category values from rows into standalone elements |
