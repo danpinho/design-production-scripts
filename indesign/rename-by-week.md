@@ -20,7 +20,7 @@ With multiple files per week, a sequence number is appended:
 2026-KW04-01.jpg
 ```
 
-Or without year:
+With `include_year_in_name = False`, the year prefix is dropped:
 
 ```
 KW03.jpg
@@ -33,9 +33,10 @@ Edit the variables at the bottom of the script:
 
 ```python
 folder = "/path/to/your/folder"
-starting_week = 3      # starting ISO week number
-starting_year = 2026   # starting year
-files_per_week = 1     # how many files belong to each week
+starting_week = 3            # starting ISO week number
+starting_year = 2026         # starting year
+files_per_week = 1           # how many files belong to each week
+include_year_in_name = True  # set to False for KW03.jpg instead of 2026-KW03.jpg
 ```
 
 Then run:

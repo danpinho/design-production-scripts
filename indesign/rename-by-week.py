@@ -69,5 +69,8 @@ folder = "/path/to/your/folder"  # Replace with your actual folder path
 starting_week = 3
 starting_year = 2026
 files_per_week = 1
+include_year_in_name = True  # set to False for KW03.jpg instead of 2026-KW03.jpg
 
-batch_rename_by_week(folder, starting_week, starting_year, files_per_week)
+batch_rename_by_week(
+    folder, starting_week, starting_year, files_per_week, include_year_in_name
+)
