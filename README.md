@@ -26,7 +26,7 @@ Built for InDesign, Illustrator, and macOS.
 | [`indesign/clean-up-layers.jsx`](indesign/clean-up-layers.jsx) | Sorts all page items into three layers (Text, Images, Vectors) based on content type — useful for organizing old, unstructured documents |
 | [`indesign/export-web-print.jsx`](indesign/export-web-print.jsx) | Exports two PDFs at once — web-optimized (`-web.pdf`) for client delivery and high-res (`-print.pdf`) for print and mockups — saves to a `30 Export/` subfolder |
 | [`indesign/md-to-text-frame.jsx`](indesign/md-to-text-frame.jsx) | Places the contents of a Markdown file into the selected text frame — opens a file picker and inserts the raw text |
-| [`indesign/rename-by-week.py`](indesign/rename-by-week.py) | Renames InDesign exports sequentially by ISO week number for social media scheduling |
+| [`indesign/rename-by-week.py`](indesign/rename-by-week.py) | Renames InDesign exports by ISO calendar week (German `KW` format, e.g. `2026-KW03`), sorted by modified date — adds a sequence suffix only when multiple files share a week |
 | [`indesign/restructure-xml.py`](indesign/restructure-xml.py) | Restructures an XML file for InDesign import by extracting category values from rows into standalone elements |
 | [`indesign/setup-layers.jsx`](indesign/setup-layers.jsx) | Sets up a standardized layer structure (Images, Vectors, Text) with assigned colors, renaming default layers if present |
 | [`indesign/xml-tags-to-styles.jsx`](indesign/xml-tags-to-styles.jsx) | Creates matching paragraph styles from all XML tags in the document — useful for bootstrapping an XML import workflow |
