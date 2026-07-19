@@ -28,6 +28,7 @@ Built for InDesign, Illustrator, and macOS.
 | [`indesign/md-to-text-frame.jsx`](indesign/md-to-text-frame.jsx) | Places the contents of a Markdown file into the selected text frame — opens a file picker and inserts the raw text |
 | [`indesign/rename-by-week.py`](indesign/rename-by-week.py) | Renames InDesign exports by ISO calendar week (German `KW` format, e.g. `2026-KW03`), sorted by modified date — adds a sequence suffix only when multiple files share a week |
 | [`indesign/restructure-xml.py`](indesign/restructure-xml.py) | Restructures an XML file for InDesign import by extracting category values from rows into standalone elements |
+| [`indesign/save-version.jsx`](indesign/save-version.jsx) | Freezes the active document as the next numbered version — copies it to `Versionen/<name>-vNN.indd` and exports `PDFs/<name>-vNN.pdf` with a selectable PDF preset |
 | [`indesign/setup-layers.jsx`](indesign/setup-layers.jsx) | Sets up a standardized layer structure (Images, Vectors, Text) with assigned colors, renaming default layers if present |
 | [`indesign/xml-tags-to-styles.jsx`](indesign/xml-tags-to-styles.jsx) | Creates matching paragraph styles from all XML tags in the document — useful for bootstrapping an XML import workflow |
 
