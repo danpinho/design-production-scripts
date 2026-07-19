@@ -9,13 +9,24 @@
  * (standard project structure — see SOP "Projektordner anlegen"), created
  * automatically if it doesn't exist.
  *
- * Requires two PDF export presets defined in InDesign named "web" and "print".
+ * Requires two PDF export presets defined in InDesign named "Web" and "Print"
+ * (matched case-insensitively). The filename suffix is always lowercase.
  */
-var presetWeb = "web";
-var presetPrint = "print";
+var presetWeb = "Web";
+var presetPrint = "Print";
 
-function exportWithPreset(presetName, preset) {
-    if (preset.isValid) {
+function findPreset(presetName) {
+    for (var i = 0; i < app.pdfExportPresets.length; i++) {
+        if (app.pdfExportPresets[i].name.toLowerCase() === presetName.toLowerCase()) {
+            return app.pdfExportPresets[i];
+        }
+    }
+    return null;
+}
+
+function exportWithPreset(presetName) {
+    var preset = findPreset(presetName);
+    if (preset !== null) {
         var originalFilename = app.activeDocument.name.replace(/\.[^.]+$/, '');
         var originalFilePath = app.activeDocument.filePath;
 
@@ -24,7 +35,7 @@ function exportWithPreset(presetName, preset) {
             exportFolder.create();
         }
 
-        var exportFilename = originalFilename + "-" + presetName + ".pdf";
+        var exportFilename = originalFilename + "-" + presetName.toLowerCase() + ".pdf";
         var exportPath = new File(exportFolder + "/" + exportFilename);
 
         app.activeDocument.exportFile(ExportFormat.PDF_TYPE, exportPath, false, preset);
@@ -35,8 +46,5 @@ function exportWithPreset(presetName, preset) {
     }
 }
 
-var preset1 = app.pdfExportPresets.itemByName(presetWeb);
-var preset2 = app.pdfExportPresets.itemByName(presetPrint);
-
-exportWithPreset(presetWeb, preset1);
-exportWithPreset(presetPrint, preset2);
+exportWithPreset(presetWeb);
+exportWithPreset(presetPrint);
