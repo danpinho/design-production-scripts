@@ -46,7 +46,7 @@ Built for InDesign, Illustrator, and macOS.
 
 | Script | Description |
 |--------|-------------|
-| [`macos/create-project-folder.applescript`](macos/create-project-folder.applescript) | Creates an Adobe production project folder with `Links/`, `PDFs/`, `Versionen/`, `Zuarbeit/` subfolders — prompts for the project sequence number (year auto-prefixed to `YYYY-NNN`, next free number pre-filled) and project name, applies Title-Case and umlaut transliteration |
+| [`macos/create-project-folder.applescript`](macos/create-project-folder.applescript) | Creates an Adobe production project folder with `Links/`, `PDFs/`, `Versionen/`, `Zuarbeit/` subfolders — prompts for a client number and project number and names the folder by numbers only, `CCCC-YYPPP` (e.g. `0001-26001`: 4-digit client, 2-digit year auto-prefixed, 3-digit project; next free number per client + year pre-filled) |
 | [`macos/rename-images.scpt`](macos/rename-images.scpt) | Batch-renames image files in a folder using a `{project-id}_{location}_{sequence}.ext` convention — prompts for project ID, location, and start number, then sorts by modification date (oldest first) |
 
 ### General
