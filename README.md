@@ -36,8 +36,10 @@ Built for InDesign, Illustrator, and macOS.
 
 | Script | Description |
 |--------|-------------|
-| [`illustrator/setup-layers.jsx`](illustrator/setup-layers.jsx) | Sets up Primary, Black, and White layers for brand/logo documents, removes the default layer, and sets Primary as active |
-| [`illustrator/colorize-layers.jsx`](illustrator/colorize-layers.jsx) | Duplicates artwork from Primary to Black and White layers, applying the respective CMYK fill color to each copy |
+| [`illustrator/setup-layers-en.jsx`](illustrator/setup-layers-en.jsx) | Builds the nine-layer structure for brand/logo master documents with English layer names (Notes → Background), locks the three non-printing guide layers, and leaves Logo-Color active |
+| [`illustrator/setup-layers-de.jsx`](illustrator/setup-layers-de.jsx) | Same layer structure with German layer names (Anmerkungen → Hintergrund), leaving Logo-Farbig active |
+| [`illustrator/colorize-layers-en.jsx`](illustrator/colorize-layers-en.jsx) | Duplicates the artwork from Logo-Color onto Logo-Positive (100% black) and Logo-Negative (white), applying the respective CMYK fill to each copy |
+| [`illustrator/colorize-layers-de.jsx`](illustrator/colorize-layers-de.jsx) | Same for the German layer set: Logo-Farbig → Logo-Positiv and Logo-Negativ |
 | [`illustrator/export-layers.jsx`](illustrator/export-layers.jsx) | Saves each layer as a separate .ai file named after the document and layer |
 | [`illustrator/export-layers-svg.jsx`](illustrator/export-layers-svg.jsx) | Exports each layer as a separate SVG file into an SVG subfolder next to the source file |
 | [`illustrator/export-print.jsx`](illustrator/export-print.jsx) | Exports EPS, SVG, and PDF into separate subfolders next to the source file |
